@@ -54,10 +54,10 @@ public abstract class AbstractSorter {
     *** if head or head.next is null, just return head
         otherwise:
             1. Split the list into 2 separate lists:
-            -get the Node in the middle of the list (middle=findMiddle(head)),
+                -get the Node in the middle of the list (middle=findMiddle(head)),
                     and the one right after it (nextOfMiddle=middle.next)
                 -detach the link from middle to middle.next (middle.next=null)
-                2. Sort the left list (mergeSort(head)) **returns a Node, store this as "left"
+            2. Sort the left list (mergeSort(head)) **returns a Node, store this as "left"
             3. Sort the right list (mergeSort(nextOfMiddle)) **returns a Node, store this as "right"
             4. Merge the two newly sorted halves (sortedMerge(left,right)) **returns a Node which is the new head
             5. Return the new head
