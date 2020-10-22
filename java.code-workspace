@@ -1,0 +1,9 @@
+{
+	"folders": [{
+		"path": "."
+	}],
+	"settings": {
+		"java.debug.settings.console": "internalConsole",
+		"java.format.comments.enabled": false,
+	}
+}
