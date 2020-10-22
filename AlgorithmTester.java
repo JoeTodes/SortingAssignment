@@ -45,16 +45,16 @@ public class AlgorithmTester {
             last = last.next;
         }
 
-        System.out.println("Bubble Sort:");
-        runSort(l -> sorter.bubbleSort(l));
-        System.out.println("Selection Sort:");
-        runSort(l -> sorter.selectionSort(l));
         System.out.println("Insertion Sort:");
         runSort(l -> sorter.insertionSort(l));
-        System.out.println("Quick Sort:");
-        runSort(l -> sorter.quickSortHandler(l));
+        System.out.println("Selection Sort:");
+        runSort(l -> sorter.selectionSort(l));
+        System.out.println("Bubble Sort:");
+        runSort(l -> sorter.bubbleSort(l));
         System.out.println("Merge Sort:");
         runSort(l -> sorter.mergeSortHandler(l));
+        System.out.println("Quick Sort:");
+        runSort(l -> sorter.quickSortHandler(l));
     }
 
     public static void runStressTests() throws IOException {
@@ -159,15 +159,15 @@ public class AlgorithmTester {
 
     public static void performAllTimedSorts() throws IOException {
 
-        writer.write("Bubble Sort:\n");
-        runTimedSort(l -> sorter.bubbleSort(l));
-        writer.write("Selection Sort:\n");
-        runTimedSort(l -> sorter.selectionSort(l));
         writer.write("Insertion Sort:\n");
         runTimedSort(l -> sorter.insertionSort(l));
-        writer.write("Quick Sort:\n");
-        runTimedSort(l -> sorter.quickSortHandler(l));
+        writer.write("Selection Sort:\n");
+        runTimedSort(l -> sorter.selectionSort(l));
+        writer.write("Bubble Sort:\n");
+        runTimedSort(l -> sorter.bubbleSort(l));
         writer.write("Merge Sort:\n");
         runTimedSort(l -> sorter.mergeSortHandler(l));
+        writer.write("Quick Sort:\n");
+        runTimedSort(l -> sorter.quickSortHandler(l));
     }
 }
