@@ -43,7 +43,11 @@ public abstract class AbstractSorter {
         *** DO NOT OVERRIDE THIS METHOD, just the mergeSort, findMiddle, and sortedMerge methods below
         *** This method just exists so the Tester program can be a bit cleaner
         */
-        list.head = mergeSort(list.head);
+        Node newHead = mergeSort(list.head);
+        if (newHead != null) {
+            list.head = newHead;
+
+        }
     };
 
     public abstract Node mergeSort(Node head);
